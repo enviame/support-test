@@ -54,6 +54,15 @@ Pregunta 2)
 
 
 
-Ejecutivos del chat
+Ejecutivos del chat de Enviame repotan que un cliente no puede crear envios a través de la integración con shopify, en base al siguiente (documento de integración)[https://platform.enviame.io/doc/paso-a-paso-shopify.pdf] solicita la información y/o antecedentes necesarios para poder determinar el problema.
 
+
+> El postulante debería ir válidando cada uno de los pasos del manual, como respuesta se debe indicar que todos los paso estan correcto, pero en el paso 5 que se añade una url especial en shopify enviarle que la url que esta usando el cliente es esta: `https://us-central1-easypoint-latam...4%E2%80%9D`. Con esta url el postulante debería identificar que la url no es válida y debería dar solucion al problema indicando el formato correcto.
+
+
+
+Pregunta 3)
+
+
+El equipo de operaciones reporta el siguiente (video)[link] con un bug presentado en la plataforma, en base a este video describe los antecedentes necesarios para que el equipo de desarrollo pueda entender lo ocurrido y así poder solucionar.
  
