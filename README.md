@@ -8,51 +8,50 @@ Pregunta 1)
 
 Evalue y reporte la siguiente situación
 
-**Información**
+
+**Palabras clave**
+
+- Provedor logistico o carrier: Es la empresa que realizará el despacho del producto desde el ecommerce a la dirección del cliente.
+- Servicio: Indica la forma en que se despachará el producto ya sea de forma express, el mismo día, normal, etc...
+- Reglas: Parametrización en base a peso (weight) del pedido y comuna de destino que permite determinar automaticamente el carrier y servicio con el que se debe despachar este.
 
 
-- Reglas: Parametrización en base a peso (weight) y comuna destino se determina el courier y servicio con el que se debe despachar el envio
+**Contexto**
+
+Enviame es una API que que permite a e-commerces despachar sus pedidos con diferentes proveedores lógisticos (Correos de Chile, Starkn, Bluexpress, etc), cada cliente integrado a la API envia un payload con la información del pedido, dentro de los paramentros de entrada se puede o no indicar el provedor logistico y servicio con el que se quiere despachar el producto. En caso que el payload no indique el carrier y servicio este se determina a través de las reglas.
 
 
-Situación:
+
+**Situación**
 
 
-- El cliente *A* reporta que sus envios se estan creando con el servicio incorrecto, al revisar el log de un envio de forma aleatoría te encuentras con lo siguiente:
+- El cliente *A* reporta que el envío con la referencia *TI255826267* se creó con el servicio *normal* en vez del servicio *express* y piden a ti determinar que ocurrio y como se debería solucionar, para esto puedes solicitar la información que tu creas necesaria a *email@enviame.io* para ver que sucedió con el envio. 
 
 
-```json
+> Si el postulante lo solicita se debe dar acceso a sitio del log con el siguiente usuario y contraseña
 
-{
-  "imported_id": "112",
-  "price": 19570,
-  "n_packages": 3,
-  "product": "Ingleteadora Bosch GCM-12 GDL 1.800W",
-  "type": "delivery",
-  "weight": "1",
-  "volume": "1",
-  "customer_name": "NORMA ANGÉLICA REYES",
-  "customer_phone": "+56998213566",
-  "customer_email": "scarcamoh@hotmail.com-13b.ct.vtex.com.br",
-  "place": "Quinta normal",
-  "full_address": "Calle 1234",
-  "warehouse": "DEV",
-  "phone": null,
-}
+
+```
+email: support@enviame.io
+contraseña:postulacion
+```
+
+
+> Con el acceso al log el postulante debería determinar que el envio al no tener en el payload de entrada carrier_code y carrier_service se determino de forma automatica a través de la regla de la empresa y debería solicitar el detalle de la regla de la empresa.
+
 
 ```
 
-Regla de la empresa
+regla empresa en formato json
+
+```
+
+> El postulante debería determinar que el envio se creo con el servicio incorrecto por que la regla de la empresa estaba mal configurada.
+
  
 
-```
-Regla empresa
-
-```
-
-En base a los antecendentes entregados indique que este pasando y reporte los antecedentes en trello u otro.
-
-
 Pregunta 2)
+
 
 
 Ejecutivos del chat
