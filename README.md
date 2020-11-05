@@ -64,7 +64,7 @@ Ejecutivos del chat de Enviame repotan que un cliente no puede crear envios a tr
 ##### Pregunta 3)
 
 
-El equipo de operaciones reporta el siguiente (video)[link] con un bug presentado en la plataforma, en base a este video describe los antecedentes necesarios para que el equipo de desarrollo pueda entender lo ocurrido y así poder solucionar.
+El equipo de operaciones reporta el siguiente (video)['./assets/videop3.mov'] con un bug presentado en la plataforma, en base a este video describe los antecedentes necesarios para que el equipo de desarrollo pueda entender lo ocurrido y así poder solucionar.
  
 
 ##### Pregunta 4)
