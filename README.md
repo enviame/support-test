@@ -3,7 +3,7 @@
 #### Prueba
 
 
-Pregunta 1)
+##### Pregunta 1)
 
 
 Evalue y reporte la siguiente situación
@@ -50,7 +50,7 @@ regla empresa en formato json
 
  
 
-Pregunta 2)
+##### Pregunta 2)
 
 
 
@@ -61,8 +61,40 @@ Ejecutivos del chat de Enviame repotan que un cliente no puede crear envios a tr
 
 
 
-Pregunta 3)
+##### Pregunta 3)
 
 
 El equipo de operaciones reporta el siguiente (video)[link] con un bug presentado en la plataforma, en base a este video describe los antecedentes necesarios para que el equipo de desarrollo pueda entender lo ocurrido y así poder solucionar.
  
+
+##### Pregunta 4)
+
+La empresa MULTIMARCAS quiere abrir un ticket de reclamo para uno de sus envíos que presenta un retraso en su entrega. El usuario reporta problemas a la hora de crear el ticket. ¿Cómo se puede solucionar esto?
+
+El request para crear un ticket es el siguiente:
+
+**Endpoint:** https://platform.enviame.io/support-test/create-ticket
+**Method:** POST
+**Headers:**
+- Content-Type: application/json
+- Accept: application/json
+
+**Body:**
+```
+{
+    "company_id": 345,
+    "user_id": 1566,
+    "subject": "Envío atrasado",
+    "message": "Buenos días, el envío P45678 debía ser entregado el día 25/10/2020 y aún no llega a destino, por favor gestionar la entrega lo antes posible"
+}
+```
+
+### Otros endpoints de interés:
+
+#### Detalle de una empresa
+
+GET https://platform.enviame.io/support-test/companies/ID
+
+#### Detalle de un usuario
+
+GET https://platform.enviame.io/support-test/users/ID
