@@ -1,35 +1,26 @@
-# support-test
+# Support test
 
-#### Prueba
+### ¿Qué es Envíame?
 
+Envíame es una API que que permite a e-commerces despachar sus pedidos con diferentes proveedores lógisticos (CorreosChile, Starken, Bluexpress, etc). Cada cliente integrado a la API envía un payload con la información del pedido y dentro de los parámetros de entrada se puede o no indicar el proveedor logístico y servicio con el que se quiere despachar el producto. En caso de que el payload no indique el carrier y el servicio este se determina a través de las reglas.
 
-##### Pregunta 1)
+### Conceptos clave
 
+- **Proveedor logístico o carrier:** Es la empresa que realizará el despacho del producto desde el e-commerce hasta la dirección del cliente.
+- **Servicio:** Indica la forma en que el carrier despachará el producto, ya sea de forma normal, express, entrega en el mismo día, etc. Cada carrier cuenta con sus propios servicios.
+- **Reglas:** Parametrización en base a peso (weight) del pedido y comuna de destino que permite determinar automáticamente el carrier y servicio con el que se debe despachar un envío cuando ninguno de estos dos parámetros son indicados explícitamente. Un ejemplo de regla es el siguiente:
+-- Si el envío a Talca pesa **5 kg o menos**: envíar mediante Chilexpress, servicio express.
+-- Si el envío a Talca pesa **más de 5 kg**: envíar mediante Starken, servicio normal.
 
-Evalue y reporte la siguiente situación
+### Pregunta 1: análisis 
 
+Evalue y reporte la siguiente incidencia.
 
-**Palabras clave**
+#### Situación
 
-- Provedor logistico o carrier: Es la empresa que realizará el despacho del producto desde el ecommerce a la dirección del cliente.
-- Servicio: Indica la forma en que el carrier despachará el producto ya sea de forma express, el mismo día, normal, etc. Cada carrier cuenta con sus propios servicios.
-- Reglas: Parametrización en base a peso (weight) del pedido y comuna de destino que permite determinar automaticamente el carrier y servicio con el que se debe despachar este.
+El cliente *A* reporta que el envío con la referencia *TI255826267* se creó con el servicio *normal* en vez del servicio *express* y piden al área TI determinar que ocurrió y cómo se debería solucionar. Para esto puedes solicitar la información que tu creas necesaria a *email@enviame.io* para ver que sucedió con el envío.
 
-
-**Contexto**
-
-Enviame es una API que que permite a e-commerces despachar sus pedidos con diferentes proveedores lógisticos (Correos de Chile, Starkn, Bluexpress, etc), cada cliente integrado a la API envia un payload con la información del pedido, dentro de los paramentros de entrada se puede o no indicar el provedor logistico y servicio con el que se quiere despachar el producto. En caso que el payload no indique el carrier y servicio este se determina a través de las reglas.
-
-
-
-**Situación**
-
-
-- El cliente *A* reporta que el envío con la referencia *TI255826267* se creó con el servicio *normal* en vez del servicio *express* y piden a ti determinar que ocurrio y como se debería solucionar, para esto puedes solicitar la información que tu creas necesaria a *email@enviame.io* para ver que sucedió con el envio. 
-
-
-> Si el postulante lo solicita se debe dar acceso a sitio del log con el siguiente usuario y contraseña
-
+> Si el postulante lo solicita se debe dar acceso a Telescope con el siguiente usuario y contraseña
 
 ```
 email: support@enviame.io
@@ -37,37 +28,31 @@ contraseña:postulacion
 ```
 
 
-> Con el acceso al log el postulante debería determinar que el envio al no tener en el payload de entrada carrier_code y carrier_service se determino de forma automatica a través de la regla de la empresa y debería solicitar el detalle de la regla de la empresa.
+> Con el acceso a Telescope el postulante debería determinar que el envío al no tener en el payload de entrada carrier_code y carrier_service se determinó el servicio de forma automática a través de la regla de la empresa y debería solicitar el detalle de la regla de la empresa.
 
 
 ```
-
 regla empresa en formato json
-
 ```
 
-> El postulante debería determinar que el envio se creo con el servicio incorrecto por que la regla de la empresa estaba mal configurada.
+> El postulante debería determinar que el envío se creó con el servicio incorrecto porque la regla de la empresa estaba mal configurada.
 
  
 
-##### Pregunta 2)
+### Pregunta 2: integración Shopify
 
-
-
-Ejecutivos del chat de Enviame repotan que un cliente no puede crear envios a través de la integración con shopify, en base al siguiente [documento de integración](https://platform.enviame.io/doc/paso-a-paso-shopify.pdf) solicita la información y/o antecedentes necesarios para poder determinar el problema.
-
+Los ejecutivos del chat de Envíame reportan que un cliente no puede crear envíos a través de la integración con Shopify. El cliente indica que al hacer click en el botón Fullfill no se ve reflejado el envío en la plataforma de Envíame. En base al siguiente [manual de integración](https://platform.enviame.io/doc/paso-a-paso-shopify.pdf) debes validar que la integración está correctamente configurada. Si necesitas más información sobre la empresa y sus envíos, nos puedes contactar a email@enviame.io.
 
 > El postulante debería ir válidando cada uno de los pasos del manual, como respuesta se debe indicar que todos los paso estan correcto, pero en el paso 5 que se añade una url especial en shopify enviarle que la url que esta usando el cliente es esta: `https://us-central1-easypoint-latam...4%E2%80%9D`. Con esta url el postulante debería identificar que la url no es válida y debería dar solucion al problema indicando el formato correcto.
 
 
-
-##### Pregunta 3)
+### Pregunta 3: reporte de bug web
 
 
 El equipo de operaciones reporta el siguiente [video]('./assets/videop3.mov') con un bug presentado en la plataforma, en base a este video describe los antecedentes necesarios para que el equipo de desarrollo pueda entender lo ocurrido y así poder solucionar.
  
 
-##### Pregunta 4)
+### Pregunta 4: reporte de bug backend
 
 La empresa MULTIMARCAS quiere abrir un ticket de reclamo para uno de sus envíos que presenta un retraso en su entrega. El usuario reporta problemas a la hora de crear el ticket. ¿Cómo se puede solucionar esto?
 
@@ -89,12 +74,12 @@ El request para crear un ticket es el siguiente:
 }
 ```
 
-### Otros endpoints de interés:
+#### Otros endpoints de interés:
 
-#### Detalle de una empresa
+###### Detalle de una empresa
 
 GET https://platform.enviame.io/support-test/companies/ID
 
-#### Detalle de un usuario
+###### Detalle de un usuario
 
 GET https://platform.enviame.io/support-test/users/ID
