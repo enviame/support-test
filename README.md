@@ -12,7 +12,7 @@ Evalue y reporte la siguiente situación
 **Palabras clave**
 
 - Provedor logistico o carrier: Es la empresa que realizará el despacho del producto desde el ecommerce a la dirección del cliente.
-- Servicio: Indica la forma en que se despachará el producto ya sea de forma express, el mismo día, normal, etc...
+- Servicio: Indica la forma en que el carrier despachará el producto ya sea de forma express, el mismo día, normal, etc. Cada carrier cuenta con sus propios servicios.
 - Reglas: Parametrización en base a peso (weight) del pedido y comuna de destino que permite determinar automaticamente el carrier y servicio con el que se debe despachar este.
 
 
