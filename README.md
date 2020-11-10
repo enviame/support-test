@@ -1,7 +1,5 @@
 # Support test
 
-[test](assets/database.jpg)
-
 ### ¿Qué es Envíame?
 
 Envíame es una API que permite a e-commerces (nuestros clientes) despachar sus pedidos con diferentes proveedores lógisticos (CorreosChile, Starken, Bluexpress, etc). Cada cliente integrado a la API **ejecuta un request enviando un payload** con la información del pedido y dentro de los parámetros de entrada se puede o no indicar el proveedor logístico y servicio con el que se quiere despachar el producto. En caso de que el payload no indique el carrier y/o el servicio estos se determina utilizando una regla, que indica que operador logístico y servicio se debe utilizar (normal, express, etc.), y que se encuentra configurada en el sistema de envíame y almacenada en la base de datos de reglas del sistema. Además, cada envío cuenta con una **referencia**, que corresponde al número de orden asociado al despacho.
@@ -96,10 +94,10 @@ Un nuevo cliente reporta un problema a los ejecutivos del chat de soporte Envía
 En base al [manual de integración](https://platform.enviame.io/doc/paso-a-paso-shopify.pdf) y a los antencedentes que se adjuntan debes validar que la integración está correctamente configurada, orientar al cliente en caso de que corresponda que haga algo o derivar al área de desarrollo envíame.
 
 Antecedentes:
-[screenshot 1](https://storage.googleapis.com/technical-test/shopify_antes_que_todo_1.png)
-[screenshot 2](https://storage.googleapis.com/technical-test/shopify_antes_que_todo_2.png)
-[screenshot 3](https://storage.googleapis.com/technical-test/shopify_paso_4.png)
-[screenshot 4](https://storage.googleapis.com/technical-test/shopify_paso_7.png)
+[screenshot 1](assets/shopify_antes_que_todo_1.png)
+[screenshot 2](assets/shopify_antes_que_todo_2.png)
+[screenshot 3](assets/shopify_paso_4.png)
+[screenshot 4](assets/shopify_paso_7.png)
 
 Escribe a *tech-test@enviame.io* para solicitar mas antecedentes, resolver o derivar la incidencia.
 > Si requieres mas información para resolver la incidencia pon en el asunto: [P2] Customer Issue [Action Required], e indica la información que requieres del cliente.
@@ -114,7 +112,7 @@ Escribe a *tech-test@enviame.io* para solicitar mas antecedentes, resolver o der
 
 ### Pregunta 3: Análisis de incidencia de bug web
 
-El equipo de operaciones le reportó un problema al intentar ingresar a la plataforma. Usted intentó reproducir la situación que produce el problema utilitzando el inspect de su navegador y observó lo indicado en el video adjunto [video](https://storage.googleapis.com/technical-test/videop3.mov). En base a los antecedentes disponibles documente la incidencia técnica para que el equipo de desarrollo pueda entender lo ocurrido y así poder solucionar.
+El equipo de operaciones le reportó un problema al intentar ingresar a la plataforma. Usted intentó reproducir la situación que produce el problema utilitzando el inspect de su navegador y observó lo indicado en el video adjunto [video](assets/videop3.mov). En base a los antecedentes disponibles documente la incidencia técnica para que el equipo de desarrollo pueda entender lo ocurrido y así poder solucionar.
 
 Escribe a *tech-test@enviame.io* para derivar la incidencia.
 > Usa el asunto: [P3] Dev Issue [Action Required], incluyendo los antecedentes necesarios para que el equipo de desarrollo pueda resolver.
@@ -189,7 +187,7 @@ base de datos: enviame
 ```
 
 La base de datos contiene las tablas y relaciones descritas en el siguiente modelo:
-[Modelo de datos](https://storage.googleapis.com/technical-test/database.jpg)
+[Modelo de datos](assets/database.jpg)
 
 Utilizando sus conocimientos en SQL y explorando la base de datos diseñe las consultas en SQL necesarias para proporcionar la siguiente información:
 
