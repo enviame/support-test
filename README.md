@@ -206,6 +206,7 @@ Escribe a *tech-test@enviame.io* para enviar las consultas diseñadas para cada 
 ### Resultados Esperados
 
 #### Pregunta 5.1
+```
 select d.id, d.imported_id, d.tracking_number, d.company_id, d.delivery_status_id, d.created_at
 from deliveries as d
 where d.tracking_number is not null
@@ -214,8 +215,10 @@ and d.delivery_status_id = 10
 and created_at > '2020-09-01'
 and created_at <= '2020-11-01'
 order by created_at desc;
+```
 
 #### Pregunta 5.2
+```
 select d.id, d.imported_id, d.tracking_number, c.name1, ds.name, d.created_at
 from deliveries as d
 join delivery_statuses as ds on ds.id = d.delivery_status_id
@@ -224,8 +227,10 @@ where d.tracking_number is not null
 and d.company_id = 620
 and d.delivery_status_id = 10
 order by created_at desc;
+```
 
 #### Pregunta 5.3
+```
 select d.id, d.imported_id, d.tracking_number, c.name1, ds.name,  w.code, a.full_address, p.name, d.created_at
 from deliveries as d
 join delivery_statuses as ds on ds.id = d.delivery_status_id
@@ -237,6 +242,7 @@ where d.tracking_number is not null
 and d.company_id = 620
 and d.delivery_status_id = 10
 order by created_at desc;
+```
 
 ### Pregunta 6: Reporte
 
@@ -246,8 +252,13 @@ Para los 5 casos anteriormente descritos envíe un reporte sencillo, que conste 
 
 
 ### Resultados Esperados
--------------------------------------------
-|TIPO INCIDENCIA|    ESTADO   | CANTIDAD  |
+|   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+
+TIPO INCIDENCIA; ESTADO   | CANTIDAD
 |-----------------------------------------|
 | Soporte       | Solucionado |      4    |
 |-----------------------------------------|
