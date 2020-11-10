@@ -57,6 +57,31 @@ Una vez determines el curso de acción de la incidencia envía tu respuesta a *t
 > Si requieres mas información para resolver la incidencia pon en el asunto: [P1] Customer Issue [Action Required], e indica lo que requieres.
 > Si requieres responder la incidencia pon en el asunto: [P1] Customer Issue [solved], e indica tu respuesta.
 > Si requieres derivar la incidencia al equipo de desarrollo de Envíame pon en el asunto: [P1] Dev Issue [Action Required], e indica los antecedentes para que el área de desarrollo pueda resolver.
+
+### Resultados Esperados
+
+#### Pregunta 1.1
+El postulante debería determinar que requiere conseguir el payload.
+
+#### Pregunta 1.2
+El postulante debería concluir que debe conseguir acceso al sistema de logs para recopilar la mayor cantidad de antecedentes posibles.
+
+#### Pregunta 1.3
+El postulante debiese haber conseguido acceso a los logs (pregunta anterior), y determinar que la causa del problema tiene que ver con una regla mal configurada de tal modo que debe ser capaz de concluir que puede resolver el incidente por si mismo.
+
+#### Sección manos a la obra:
+El postulante debería escribir a SysAdm Team para solicitar acceso al sistema de logs. La respuesta de SysAdm debería agregar que si requiere acceso a las reglas debe solicitarlas al Dev Team.
+
+> Con el acceso a Telescope el postulante debería determinar que el envío al no tener en el payload de entrada carrier_code y carrier_service se determinó el servicio de forma automática a través de la regla de la empresa y debería solicitar el detalle de la regla de la empresa.
+
+El postulante debería escribir a Dev Team para solicitar las reglas del cliente y de este modo concluir que el problema se debe a que la regla está mal configurada.
+
+```
+regla empresa en formato json
+```
+
+> El postulante debería poder resolver la incidencia por si mismo al determinar que el envío se creó con el servicio incorrecto porque la regla de la empresa estaba mal configurada.
+
  
 ### Pregunta 2: Análisis y gestión de incidencia en la creación de envío usando Integración Shopify
 
@@ -80,6 +105,11 @@ Escribe a *tech-test@enviame.io* para solicitar mas antecedentes, resolver o der
 > Si requieres derivar la incidencia al equipo de desarrollo de Envíame pon en el asunto: [P2] Dev Issue [Action Required], e indica los antecedentes para que el área de desarrollo pueda resolver.
 
 
+### Resultados Esperados
+
+> El postulante debería ir válidando cada uno de los pasos del manual y detectar que en el paso 5, en que se añade una url en shopify, el cliente ingresó esta: `https://us-central1-easypoint-latam...4%E2%80%9D`. Con esta url el postulante debería identificar que la url no es válida y debería dar solucion al problema indicando el formato correcto.
+
+
 ### Pregunta 3: Análisis de incidencia de bug web
 
 El equipo de operaciones le reportó un problema al intentar ingresar a la plataforma. Usted intentó reproducir la situación que produce el problema utilitzando el inspect de su navegador y observó lo indicado en el video adjunto [video](assets/videop3.mov). En base a los antecedentes disponibles documente la incidencia técnica para que el equipo de desarrollo pueda entender lo ocurrido y así poder solucionar.
@@ -87,6 +117,10 @@ El equipo de operaciones le reportó un problema al intentar ingresar a la plata
 Escribe a *tech-test@enviame.io* para derivar la incidencia.
 > Usa el asunto: [P3] Dev Issue [Action Required], incluyendo los antecedentes necesarios para que el equipo de desarrollo pueda resolver.
 
+### Resultados Esperados
+
+> El postulante debería documentar el problema utilizando antecedentes técnicos que permitan reproducir la situación utilizando la mayor cantidad de elementos técnicos posibles.
+ 
 
 ### Pregunta 4: reporte de bug de backend
 
@@ -132,6 +166,10 @@ Escribe a *tech-test@enviame.io* para solicitar mas antecedentes, resolver o der
 > Si requieres derivar la incidencia al equipo de desarrollo de Envíame pon en el asunto: [P4] Dev Issue [Action Required], e indica los antecedentes para que el área de desarrollo pueda resolver.
 
 
+### Resultados Esperados
+
+> El postulante debería concluir que a la empresa le falta el dato 'code' y determinar que este dato es "modificable" por el usuario administrador del Cliente por lo tanto resolver la incidencia con una indicación al usuario.
+
 ### Pregunta 5: Búsqueda de datos:
 
 El Cliente empresa con ***código "EVIL_CORP"*** señala que se le han cobrado mal los envíos entre el ***2020-09-01 y el 2020-11-01*** y el área de atención a cliente te solicite que extraigas información de la Base de Datos para poder verificar información sobre los envíos del cliente para poder analizar la situación.
@@ -165,11 +203,61 @@ Extienda la consulta anterior, incluyendo mas tablas, para agregar los siguiente
 Escribe a *tech-test@enviame.io* para enviar las consultas diseñadas para cada ítem usando el asunto [P5] SQL, e indicando el número de ítem antes de tu script SQL (Ej: Item 5.1: SELECT ... FROM ... WHERE ...;)
 
 
+### Resultados Esperados
+
+#### Pregunta 5.1
+```
+select d.id, d.imported_id, d.tracking_number, d.company_id, d.delivery_status_id, d.created_at
+from deliveries as d
+where d.tracking_number is not null
+and d.company_id = 620
+and d.delivery_status_id = 10
+and created_at > '2020-09-01'
+and created_at <= '2020-11-01'
+order by created_at desc;
+```
+
+#### Pregunta 5.2
+```
+select d.id, d.imported_id, d.tracking_number, c.name1, ds.name, d.created_at
+from deliveries as d
+join delivery_statuses as ds on ds.id = d.delivery_status_id
+join companies as c on c.id = d.company_id
+where d.tracking_number is not null
+and d.company_id = 620
+and d.delivery_status_id = 10
+order by created_at desc;
+```
+
+#### Pregunta 5.3
+```
+select d.id, d.imported_id, d.tracking_number, c.name1, ds.name,  w.code, a.full_address, p.name, d.created_at
+from deliveries as d
+join delivery_statuses as ds on ds.id = d.delivery_status_id
+join companies as c on c.id = d.company_id
+join warehouses as w on w.company_id = c.id
+join addresses as a on w.address_id = a.id
+join places as p on p.id = a.place_id
+where d.tracking_number is not null
+and d.company_id = 620
+and d.delivery_status_id = 10
+order by created_at desc;
+```
+
 ### Pregunta 6: Reporte
 
 Para los 5 casos anteriormente descritos envíe un reporte sencillo, que conste de una tabla donde se agrupen las incidencias por tipo y estado, y donde se indique:
 * Tipo de incidencia: soporte o requerimiento
 * Estado: solucionado o pendiente
+
+
+### Resultados Esperados
+| Tipo   |      Estado      |  Cantidad |
+|----------|:-------------:|------:|
+| Soporte |  solucionado | 4 |
+| Requerimiento |    Solucionado   |   1 |
+
+
 
 
 
