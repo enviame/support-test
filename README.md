@@ -252,18 +252,12 @@ Para los 5 casos anteriormente descritos envíe un reporte sencillo, que conste 
 
 
 ### Resultados Esperados
-|   |   |   |   |   |
-|---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+| Tipo   |      Estado      |  Cantidad |
+|----------|:-------------:|------:|
+| Soporte |  solucionado | 4 |
+| Requerimiento |    Solucionado   |   1 |
 
-TIPO INCIDENCIA; ESTADO   | CANTIDAD
-|-----------------------------------------|
-| Soporte       | Solucionado |      4    |
-|-----------------------------------------|
-| Requerimiento | Solucionado |      1    |
--------------------------------------------
+
 
 
 
