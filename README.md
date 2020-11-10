@@ -2,7 +2,7 @@
 
 ### ¿Qué es Envíame?
 
-Envíame es una API que permite a e-commerces (nuestros clientes) despachar sus pedidos con diferentes proveedores lógisticos (CorreosChile, Starken, Bluexpress, etc). Cada cliente integrado a la API **ejecuta un request enviando un payload** con la información del pedido y dentro de los parámetros de entrada se puede o no indicar el proveedor logístico y servicio con el que se quiere despachar el producto. En caso de que el payload no indique el carrier y/o el servicio estos se determina utilizando una regla, que indica que operador logístico y servicio se debe utilizar (normal, express, etc.), y que se encuentra configurada en el sistema de envíame y almacenada en la base de datos de reglas del sistema. Además, cada envío cuenta con una **referencia**, que corresponde al número de orden asociado al despacho.
+Envíame es una API que permite a e-commerces (nuestros clientes) despachar sus pedidos con diferentes proveedores lógisticos (carriers) tales como: CorreosChile, Starken, Bluexpress, etc. Cada cliente integrado a la API **ejecuta un request enviando un payload** con la información del pedido y dentro de los parámetros de entrada se puede o no indicar el proveedor logístico y servicio con el que se quiere despachar el producto. En caso de que el payload no indique el proveedor logístico (carrier) y/o el servicio estos se determina utilizando una regla, que indica que operador logístico y servicio se debe utilizar (normal, express, etc.) Dicha regla se encuentra configurada en el sistema de envíame y almacenada en la base de datos de reglas del sistema. Además, cada envío cuenta con una **referencia**, que corresponde al número de orden asociado al despacho.
 
 ### Conceptos clave
 
@@ -30,28 +30,22 @@ Asumiendo que usted puede comunicarse con el área TI del e-commerce (Customer T
 ***¿Cuál sería su primer paso en la recopilación de antecedentes técnicos?***
 
 
-Asumiendo que usted dispone de todas las herramientas de que dispone el cliente para utilizar la API de envíame, y que de usted depende determinar si para la resolución del incidente se requiere dar una indicación al cliente o bien determinar que el caso se debe derivar al área de desarrollo de TI de envíame.
+Asumiendo que usted, al igual que el cliente, dispone de todas las herramientas para utilizar la API de envíame, y que de usted depende determinar si para la resolución del incidente se requiere dar una indicación al cliente o bien determinar que el caso se debe derivar al área de desarrollo de TI de envíame.
 
 #### Pregunta 1.3
 ***Antes de decidir si se responde o deriva la incidencia ¿Cuál sería su curso de acción para el diagnóstico técnico?***
 
 #### Manos a la obra:
 
-Dado el contexto anterior te pedimos que recopiles información técnica, analises y determines que hacer con la incidencia anterior.
+Dado el contexto anterior te pedimos que recopiles información técnica, analices y determines que hacer con la incidencia anterior.
 
-Para ello puedes solicitar la información que tu creas necesaria para gestionar la incidencia a:
-```
-email: tech-test@enviame.io
-```
+Para ello puedes solicitar la información que tu creas necesaria para gestionar la incidencia a: *tech-test@enviame.io*
 
 Considera lo siguiente:
 > Si necesitas solicitar información al equipo de TI Envíame, pon en el asunto de tu correo: [P1] Dev Team.
 > Si necesitas solicitar información al equipo de TI de Cliente, pon en el asunto de tu correo: [P1] Customer Team.
 > Si necesitas solicitar información al equipo de administración de sistemas de Envíame, pon en el asunto de tu correo: [P1] SysAdm Team.
 
-```
-email: tech-test@enviame.io
-```
 
 Una vez determines el curso de acción de la incidencia envía tu respuesta a *tech-test@enviame.io* para responder o derivar la incidencia.
 > Si requieres mas información para resolver la incidencia pon en el asunto: [P1] Customer Issue [Action Required], e indica lo que requieres.
@@ -171,6 +165,7 @@ Para los 5 casos anteriormente descritos envíe un reporte sencillo, que conste 
 * Tipo de incidencia: soporte o requerimiento
 * Estado: solucionado o pendiente
 
+El reporte debe ser enviado a: *tech-test@enviame.io*, usando el asunto [P6] Reporte
 
 
 
