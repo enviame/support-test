@@ -135,7 +135,7 @@ Usted tiene acceso a una base de datos MySQL con los siguientes datos de conexi�
 ###### Datos de conexión:
 ```
 Conexión a la base de datos:
-dirección ip: 130.211.126.67 
+dirección ip: 104.197.128.158 
 puerto: 3306
 usuario: expecto
 contraseña: patronum
