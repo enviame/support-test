@@ -47,7 +47,7 @@ Considera lo siguiente:
 > Si necesitas solicitar información al equipo de administración de sistemas de Envíame, pon en el asunto de tu correo: [P1] SysAdm Team.
 
 
-Una vez determines el curso de acción de la incidencia envía tu respuesta a *tech-test@enviame.io* para responder o derivar la incidencia.
+Una vez determines el curso de acción de la incidencia envía tu respuesta a *tech-test-support@enviame.io* para responder o derivar la incidencia.
 > Si requieres mas información para resolver la incidencia pon en el asunto: [P1] Customer Issue [Action Required], e indica lo que requieres.
 > Si requieres responder la incidencia pon en el asunto: [P1] Customer Issue [solved], e indica tu respuesta.
 > Si requieres derivar la incidencia al equipo de desarrollo de Envíame pon en el asunto: [P1] Dev Issue [Action Required], e indica los antecedentes para que el área de desarrollo pueda resolver.
