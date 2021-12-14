@@ -39,7 +39,7 @@ Asumiendo que usted, al igual que el cliente, dispone de todas las herramientas 
 
 Dado el contexto anterior te pedimos que recopiles información técnica, analices y determines que hacer con la incidencia anterior.
 
-Para ello puedes solicitar la información que tu creas necesaria para gestionar la incidencia a: *support-test-tech@enviame.io*
+Para ello puedes solicitar la información que tu creas necesaria para gestionar la incidencia a: *support-tech-test@enviame.io*
 
 Considera lo siguiente:
 > Si necesitas solicitar información al equipo de TI Envíame, pon en el asunto de tu correo: [P1] Dev Team.
@@ -47,7 +47,7 @@ Considera lo siguiente:
 > Si necesitas solicitar información al equipo de administración de sistemas de Envíame, pon en el asunto de tu correo: [P1] SysAdm Team.
 
 
-Una vez determines el curso de acción de la incidencia envía tu respuesta a *support-test-tech@enviame.io* para responder o derivar la incidencia.
+Una vez determines el curso de acción de la incidencia envía tu respuesta a *support-tech-test@enviame.io* para responder o derivar la incidencia.
 > Si requieres mas información para resolver la incidencia pon en el asunto: [P1] Customer Issue [Action Required], e indica lo que requieres.
 > Si requieres responder la incidencia pon en el asunto: [P1] Customer Issue [solved], e indica tu respuesta.
 > Si requieres derivar la incidencia al equipo de desarrollo de Envíame pon en el asunto: [P1] Dev Issue [Action Required], e indica los antecedentes para que el área de desarrollo pueda resolver.
@@ -68,7 +68,7 @@ Antecedentes:
 [screenshot 3](assets/shopify_paso_4.png)
 [screenshot 4](assets/shopify_paso_7.png)
 
-Escribe a *support-test-tech@enviame.io* para solicitar mas antecedentes, resolver o derivar la incidencia.
+Escribe a *support-tech-test@enviame.io* para solicitar mas antecedentes, resolver o derivar la incidencia.
 > Si requieres mas información para resolver la incidencia pon en el asunto: [P2] Customer Issue [Action Required], e indica la información que requieres del cliente.
 > Si resuelves la incidencia pon en el asunto: [P2] Customer Issue [solved], e indica tu respuesta al cliente.
 > Si requieres derivar la incidencia al equipo de desarrollo de Envíame pon en el asunto: [P2] Dev Issue [Action Required], e indica los antecedentes para que el área de desarrollo pueda resolver.
@@ -78,7 +78,7 @@ Escribe a *support-test-tech@enviame.io* para solicitar mas antecedentes, resolv
 
 El equipo de operaciones le reportó un problema al intentar ingresar a la plataforma. Usted intentó reproducir la situación que produce el problema utilitzando el inspect de su navegador y observó lo indicado en el video adjunto [video](assets/videop3.mov). En base a los antecedentes disponibles documente la incidencia técnica para que el equipo de desarrollo pueda entender lo ocurrido y así poder solucionar.
 
-Escribe a *support-test-tech@enviame.io* para derivar la incidencia.
+Escribe a *support-tech-test@enviame.io* para derivar la incidencia.
 > Usa el asunto: [P3] Dev Issue [Action Required], incluyendo los antecedentes necesarios para que el equipo de desarrollo pueda resolver.
 
 
@@ -120,7 +120,7 @@ GET https://platform.enviame.io/support-test/companies/{id}
 ###### Detalle de un usuario
 GET https://platform.enviame.io/support-test/users/{id}
 
-Escribe a *support-test-tech@enviame.io* para solicitar mas antecedentes, resolver o derivar la incidencia.
+Escribe a *support-tech-test@enviame.io* para solicitar mas antecedentes, resolver o derivar la incidencia.
 > Si requieres mas información para resolver la incidencia pon en el asunto: [P4] Customer Issue [Action Required], e indica la información que requieres del cliente.
 > Si resuelves la incidencia pon en el asunto: [P4] Customer Issue [solved], e indica tu respuesta al cliente.
 > Si requieres derivar la incidencia al equipo de desarrollo de Envíame pon en el asunto: [P4] Dev Issue [Action Required], e indica los antecedentes para que el área de desarrollo pueda resolver.
@@ -156,7 +156,7 @@ Mejore la consulta anterior, incluyendo mas tablas, para en lugar de entregar el
 #### Pregunta 5.3
 Extienda la consulta anterior, incluyendo mas tablas, para agregar los siguientes datos código de bodega (warehouses), dirección de la bodega (address) y comuna de la bodega (places).
 
-Escribe a *support-test-tech@enviame.io* para enviar las consultas diseñadas para cada ítem usando el asunto [P5] SQL, e indicando el número de ítem antes de tu script SQL (Ej: Item 5.1: SELECT ... FROM ... WHERE ...;)
+Escribe a *support-tech-test@enviame.io* para enviar las consultas diseñadas para cada ítem usando el asunto [P5] SQL, e indicando el número de ítem antes de tu script SQL (Ej: Item 5.1: SELECT ... FROM ... WHERE ...;)
 
 
 ### Pregunta 6: Reporte
@@ -165,7 +165,7 @@ Para los 5 casos anteriormente descritos envíe un reporte sencillo, que conste 
 * Tipo de incidencia: soporte o requerimiento
 * Estado: solucionado o pendiente
 
-El reporte debe ser enviado a: *support-test-tech@enviame.io*, usando el asunto [P6] Reporte
+El reporte debe ser enviado a: *support-tech-test@enviame.io*, usando el asunto [P6] Reporte
 
 
 
