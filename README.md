@@ -148,7 +148,7 @@ La base de datos contiene las tablas y relaciones descritas en el siguiente mode
 Utilizando sus conocimientos en SQL y explorando la base de datos diseñe las consultas en SQL necesarias para proporcionar la siguiente información:
 
 #### Pregunta 5.1
-Obtenga un listado de envíos (tabla deliveries) ordenado por fecha de manera descendente y que contenga los siguientes datos: id, imported_id, tracking_numbe, company_id, delivery_status_id y created_at, donde la empresa sea ***EVIL_CORP***, el estado de los envíos sea ***ENTREGADO*** y la fecha de creación se encuentre entre las fechas indicadas en el enunciado.
+Obtenga un listado de envíos (tabla deliveries) ordenado por fecha de manera descendente y que contenga los siguientes datos: id, imported_id, tracking_number, company_id, delivery_status_id y created_at, donde la empresa sea ***EVIL_CORP***, el estado de los envíos sea ***ENTREGADO*** y la fecha de creación se encuentre entre las fechas indicadas en el enunciado.
 
 #### Pregunta 5.2
 Mejore la consulta anterior, incluyendo mas tablas, para en lugar de entregar el dato company_id entregue el dato name1 (companies) y en lugar del dato delivery_status_id entregue el dato name (delivery_statuses).
